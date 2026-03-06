@@ -38,6 +38,7 @@ body{
     align-items: center;
     justify-content: center;
     padding: 0px;
+    z-index:9999;
 }
 #THEME-SWITCH:hover
 {
@@ -57,6 +58,7 @@ transform:scale(1.1);
     padding: 0px;
     border: none;
     cursor: pointer;
+    z-index:9999;
     transition: transform 0.2s ease;
 }
 #MENU-BUTTON:hover
@@ -290,7 +292,7 @@ transform:scale(1.05);
     text-align : left;
 }
 #home .HOMEBOX {
-  margin-top: 1.5rem;
+  margin-top: 5rem;
   display: inline-block;
   background: transparent;
   border: 2px solid var(--box-border);
@@ -340,11 +342,11 @@ transform:scale(1.05);
   border-radius: 10px;
   padding: 0.4em;
   text-align: left;
-  max-width:60%;
   box-sizing: border-box;
   padding: 1.5rem;
   box-shadow: inset 0 0 20px var(--box-border);
   margin-top: 1rem;
+  width:60%;
 }
 #about h2{
     font-size: clamp(1.1rem, 3vw, 1.4rem);
@@ -515,7 +517,6 @@ transform:scale(1.05);
   font-size: clamp(1rem, 2.5vw, 1.25rem);
   font-family: 'arial', monospace;
 } 
-
 .TECHNICAL-SKILL-THIRD-LINE{
   display: flex;
   flex-wrap: nowrap;
@@ -596,15 +597,14 @@ transform:scale(1.05);
   font-size: clamp(1rem, 2.5vw, 1.25rem);
   font-family: 'arial', monospace;
 }
-
 #achievements .ACHIEVEMENTBOX {
   display: inline-block;
   background: transparent;
   border: 2px solid var(--box-border);
   border-radius: 10px;
   text-align: left;
-  width:100%;
-  max-width:60%;
+  min-width: fit-content;
+  width:60%;
   box-sizing: border-box;
   padding: 1.5rem;
   box-shadow: inset 0 0 20px var(--box-border);
@@ -643,8 +643,8 @@ transform:scale(1.05);
   position: relative;
   margin-top: 1rem;
   overflow: hidden;
-  width:100%;
-  min-height: clamp(120px, 20vh, 250px);
+  width:90%;
+  min-height: clamp(115px, 20vh, 245px);
 }
 .ACHIEVEMENT-SLIDE {
   position: absolute;
@@ -663,8 +663,8 @@ transform:scale(1.05);
   border: 2px solid var(--box-border);
   border-radius: 10px;
   text-align: left;
-  width:100%;
-  max-width:60%;
+  min-width: fit-content;
+  width:60%;
   box-sizing: border-box;
   padding: 1.5rem;
   box-shadow: inset 0 0 20px var(--box-border);
@@ -716,7 +716,6 @@ transform:scale(1.05);
     font-size: inherit;
     flex-shrink: 0;
 }
-
 .VOLUNTEER-EXPERIENCE-HEADER h1 {
   font-size: clamp(1.3rem, 4vw, 1.8rem);
   line-height: 1;
@@ -783,12 +782,12 @@ transform:scale(1.05);
   border-radius: 10px;
   padding: 0.4em;
   text-align: left;
-  max-width:60%;
   box-sizing: border-box;
   padding: 1.5rem;
   box-shadow: inset 0 0 20px var(--box-border);
-  margin-bottom: 1rem;
+  margin-bottom: 3rem;
   margin-top: 1rem;
+  min-width: fit-content;
 }
 #resume .RESUMECONTAINER{
   text-align: center;
@@ -841,4 +840,197 @@ transition : 0.3s ease;
 }
 .btn:hover{
 transform:scale(1.05);
+}
+@media(max-width:768px)
+{
+     #experience .EXPERIENCEBOX{
+  display: block;
+  background: transparent;
+  border: 2px solid var(--box-border);
+  border-radius: 10px;
+  text-align: left;
+  width: 90%;
+  max-width: 100%;
+  box-sizing: border-box;
+  padding: 1.5rem;
+  box-shadow: inset 0 0 20px var(--box-border);
+  margin: 1rem auto;
+}
+#experience .VOLUNTEER-EXPERIENCE-SLIDER{
+  position: relative;
+  margin-top: 1rem;
+  overflow: hidden;
+  width: 100%;
+  min-height: clamp(150px, 30vh, 280px);
+}
+#experience .CRICKET-EXPERIENCE-SLIDER{
+  position: relative;
+  margin-top: 1rem;
+  overflow: hidden;
+  width: 100%;
+  min-height: clamp(150px, 30vh, 280px);
+}
+#experience h2{
+  font-size: clamp(1.1rem, 3vw, 1.4rem);
+  font-family: 'Times New Roman', monospace;
+}
+#experience h3{
+  font-size: clamp(1rem, 2.5vw, 1.25rem);
+  font-family: 'tahoma', monospace;
+}
+#experience h4{
+  font-size: clamp(0.9rem, 2vw, 1.1rem);
+  font-family: monospace;
+}
+#experience .EXPERIENCECONTAINER{
+  text-align: center;
+}
+.EXPERIENCE-HEADER{
+  color: var(--text-color);
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+  white-space: normal;
+}
+.EXPERIENCE-HEADER svg{
+  width: 2em;
+  height: 2em;
+  font-size: inherit;
+  flex-shrink: 0;
+}
+.EXPERIENCE-HEADER h1{
+  font-size: clamp(1.3rem, 4vw, 1.8rem);
+  line-height: 1;
+  font-family: IMPACT, monospace;
+}
+.VOLUNTEER-EXPERIENCE-HEADER{
+  color: var(--text-color);
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+  white-space: normal;
+}
+.VOLUNTEER-EXPERIENCE-HEADER svg{
+  width: 2em;
+  height: 2em;
+  font-size: inherit;
+  flex-shrink: 0;
+}
+.VOLUNTEER-EXPERIENCE-HEADER h1{
+  font-size: clamp(1.3rem, 4vw, 1.8rem);
+  line-height: 1;
+  font-family: IMPACT, monospace;
+}
+.VOLUNTEER-EXPERIENCE-SLIDER{
+  position: relative;
+  margin-top: 1rem;
+  overflow: hidden;
+  width: 100%;
+  min-height: clamp(120px, 20vh, 250px);
+}
+.VOLUNTEER-EXPERIENCE-SLIDE{
+  position: absolute;
+  width: 100%;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 1.8s ease-in-out;
+}
+.VOLUNTEER-EXPERIENCE-SLIDE.active{
+  opacity: 1;
+  visibility: visible;
+}
+.CRICKET-EXPERIENCE-HEADER{
+  color: var(--text-color);
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+  white-space: normal;
+}
+.CRICKET-EXPERIENCE-HEADER svg{
+  width: 2em;
+  height: 2em;
+  font-size: inherit;
+  flex-shrink: 0;
+}
+.CRICKET-EXPERIENCE-HEADER h1{
+  font-size: clamp(1.3rem, 4vw, 1.8rem);
+  line-height: 1;
+  font-family: IMPACT, monospace;
+}
+.CRICKET-EXPERIENCE-SLIDER{
+  position: relative;
+  margin-top: 1rem;
+  overflow: hidden;
+  width: 100%;
+  min-height: clamp(122px, 22vh, 252px);
+}
+.CRICKET-EXPERIENCE-SLIDE{
+  position: absolute;
+  width: 100%;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 1.8s ease-in-out;
+}
+.CRICKET-EXPERIENCE-SLIDE.active{
+  opacity: 1;
+  visibility: visible;
+}
+.SOFT-SKILL-FIRST-LINE,
+.SOFT-SKILL-SECOND-LINE,
+.TECHNICAL-SKILL-FIRST-LINE,
+.TECHNICAL-SKILL-SECOND-LINE,
+.TECHNICAL-SKILL-THIRD-LINE,
+.TECHNICAL-SKILL-FOURTH-LINE,
+.TECHNICAL-SKILL-FIFTH-LINE,
+.TECHNICAL-SKILL-SIXTH-LINE,
+.TECHNICAL-SKILL-SEVENTH-LINE{
+  display:grid;
+  grid-template-columns:auto 1fr;
+  row-gap:0.6rem;
+  column-gap:0.5rem;
+}
+
+.SOFT-SKILL-FIRST-LINE svg,
+.SOFT-SKILL-SECOND-LINE svg,
+.TECHNICAL-SKILL-FIRST-LINE svg,
+.TECHNICAL-SKILL-SECOND-LINE svg,
+.TECHNICAL-SKILL-THIRD-LINE svg,
+.TECHNICAL-SKILL-FOURTH-LINE svg,
+.TECHNICAL-SKILL-FIFTH-LINE svg,
+.TECHNICAL-SKILL-SIXTH-LINE svg,
+.TECHNICAL-SKILL-SEVENTH-LINE svg{
+  grid-column:1;
+}
+
+.SOFT-SKILL-FIRST-LINE h2,
+.SOFT-SKILL-SECOND-LINE h2,
+.TECHNICAL-SKILL-FIRST-LINE h2,
+.TECHNICAL-SKILL-SECOND-LINE h2,
+.TECHNICAL-SKILL-THIRD-LINE h2,
+.TECHNICAL-SKILL-FOURTH-LINE h2,
+.TECHNICAL-SKILL-FIFTH-LINE h2,
+.TECHNICAL-SKILL-SIXTH-LINE h2,
+.TECHNICAL-SKILL-SEVENTH-LINE h2{
+  grid-column:2;
+  word-break:break-word;
+}
+    body{
+      overflow-x:hidden;
+    }
+    #home .HOMEBOX, #education .EDUBOX, #projects .PROJECTBOX, #skills .SKILLBOX, #resume .RESUMEBOX{
+        width:90%;
+    }
+    #about .ABOUTBOX{
+      width:95%;
+    }
+    #achievements .ACHIEVEMENTBOX{
+      width: 95%;
+    }
+    #achievements .ACHIEVEMENT-SLIDER {
+      position: relative;
+      margin-top: 1rem;
+      overflow: hidden;
+      width:100%;
+      min-height: clamp(150px, 35vh, 280px);
+}
 }
